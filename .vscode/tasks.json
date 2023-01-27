@@ -1,0 +1,29 @@
+{
+    "tasks": [
+        {
+            "label": "✨g++.exe etkin dosyayi derle",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+        },
+        {
+            "label": "🏃Etkin dosyayi çaliştir",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        },
+        {
+            "label": "❌Etkin dosyanin exesini sil",
+            "type": "shell",
+            "command": "del",
+            "args": [
+                "/f",
+                "/q",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+        },
+    ],
+    "version": "2.0.0"
+}
